@@ -4,7 +4,7 @@ FROM debian:buster
 RUN apt-get update
 RUN apt-get -y install nginx
 RUN apt-get -y install wget
-#&& apt-get install openssl
+RUN apt-get install openssl \
 
 #RUN apt-get install wget
 #RUN apt-get install mariadb-server mariadb-client
