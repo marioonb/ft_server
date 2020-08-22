@@ -32,7 +32,8 @@ server { # directive qui permet de regrouper les différentes actions à réalis
         # Don't use them in a production server!
         #
         # include snippets/snakeoil.conf;
-
+ 		ssl_certificate /etc/nginx/ssl/localhost.pem;
+  		ssl_certificate_key /etc/nginx/ssl/localhost.key;
         root /var/www/localhost; # tous le documents qui sont concernés par ce groupe sont dns var/www......
 
         # Add index.php to the list if you are using PHP
