@@ -23,13 +23,13 @@
 define( 'DB_NAME', 'BDD_Marion' );
 
 /** MySQL database username */
-define( 'DB_USER', 'Marion' );
+define( 'DB_USER', 'Mbelorge' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'mdp' );
+define( 'DB_PASSWORD', 'mbelorge' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'mbelorge' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
