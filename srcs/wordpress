@@ -1,0 +1,32 @@
+# Les utilisateurs expérimentés peuvent créer manuellement
+# le fichier wp-config.php en utilisant le fichier wp-config-sample.php
+# (qui se trouve dans le répertoire de base), en l'éditant comme nécessaire,
+# puis en l'enregistrant sous wp-config.php
+
+
+// ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations.** /
+//** Nom de la base de données de WordPress. */
+define('DB_NAME', 'BDD_Marion');
+
+/** Utilisateur de la base de données MySQL. */
+define('DB_USER', 'Marion');
+
+/** Mot de passe de la base de données MySQL. */
+define('DB_PASSWORD', 'mdp');
+
+/** Adresse de l'hébergement MySQL. */
+define('DB_HOST', 'localhost');
+
+# genere avec https://api.wordpress.org/secret-key/1.1/salt/
+define('AUTH_KEY',         'Fkg$c6`hX~_aRAOfzi9&iF/,%0ufVXiP@L`K4H]bOLr0;sYX9V30nzL*qP$tgWHd');
+define('SECURE_AUTH_KEY',  'O=)bJdfPHB>xCj+ZYD(4txT@1Q-f&zvK1p3^k6^v^RtctbQ4|=}oq2(eAd$CQ2zt');
+define('LOGGED_IN_KEY',    'U7|<y?]R-.z/)07;-9rXt+amr8B,m<B&kTaL>-+mJM uK2&f$X6-8Um+Eh.:+lR6');
+define('NONCE_KEY',        '~-yHKnv)L3iA <QM]Cv*&55811V5W&xh%A+<UF*>w3y]+ mdQ6@^)JwG5[9q.7r2');
+define('AUTH_SALT',        '=&i17*jTLn:Z[zg,r?Dwo uv9L|5,gzR-~x7-!mXQcfVA5Lc$$Hh@2.L&YyM_z0P');
+define('SECURE_AUTH_SALT', '4a3{vU |c%xw%-Xc)A,@$9~k#OlWB-/8+nX+#;i}A{_*(:5oi.-&B%P0GHDi}{-H');
+define('LOGGED_IN_SALT',   '-,Shwb3(A34$]6FS880OC)U~(+$?sm+#J@8#!K$u2Mtr+JvKE+q[0QLsCt7HnX/+');
+define('NONCE_SALT',       '[iS^b~mW4FC|&9*|m;#R++rlsHq bQ##=h16&,,7]Z#?Y_IVXpCQ7dr~BOz? e.s');
+
+> echo "CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -u root
+> echo "GRANT ALL ON wordpress.* TO 'wordpress_user'@'localhost' IDENTIFIED BY 'password';" | mysql -u root
+> echo "FLUSH PRIVILEGES;" | mysql -u root

@@ -1,0 +1,34 @@
+
+
+# Virtual Host configuration for example.com
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#
+server {
+	listen 80;
+	listen [::]:80;
+
+	listen 443 ssl;
+	listen [::]:443 ssl;
+
+	#ssl on;
+	ssl_certificate /etc/nginx/ssl/ft_server.crt;
+	ssl_certificate_key /etc/nginx/ssl/ft_server.key;
+
+
+	root /var/www/localhost;
+	index index.php index.html index.htm;
+
+	server_name ft_server;
+
+	location / {
+		autoindex on;
+		try_files $uri $uri/ =404;
+	}
+
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+	}
+}

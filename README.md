@@ -13,7 +13,7 @@ pour forcer :
 lancer le conteneur (ici on ouvre le port 80) :
 > docker run -d -p 80:80 --name=*nomconteneur* *nomimage*
 lancer le conteneur (ici on ouvre le port 80 et 443) :
-> docker run -d -p 80:80 443:443 --name=*nomconteneur* *nomimage*
+> docker run -d -p 80:80 -p 443:443 --name=*nomconteneur* *nomimage*
 
 Vérifie les conteneurs qui tournent et la totalité des conteneurs avec :
 > docker ps
