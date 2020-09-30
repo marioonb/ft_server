@@ -1,10 +1,10 @@
 créer l'image :
 > docker build -t *nomimage* .
 
-liste les images crées :
+lister les images créées :
 > docker images
 
-Supprimer une image ou la totalité des images avec :
+Supprimer une image ou la totalité des images :
 > docker rmi *nomimageouid*
 > docker rmi $(docker images -a -q)
 pour forcer :
@@ -15,13 +15,17 @@ lancer le conteneur (ici on ouvre le port 80) :
 lancer le conteneur (ici on ouvre le port 80 et 443) :
 > docker run -d -p 80:80 -p 443:443 --name=*nomconteneur* *nomimage*
 
-Vérifie les conteneurs qui tournent et la totalité des conteneurs avec :
+Vérifie les conteneurs qui tournent et la totalité des conteneurs :
 > docker ps
 > docker ps -a
 
-Arrêter un conteneur et supprimer la totalité des conteneurs :
+Arrêter un conteneur, supprimer un conteneur et supprimer la totalité des conteneurs :
 > docker stop *nomconteneurouid*
+> docker rm *nomduconteneur*
 > docker rm $(docker ps -a -q)
 
 Entrer dans le conteneur :
 > docker exec -ti *nomconteneurouid* bash
+
+lancer un conteneur en desactivant l'index :
+> docker run -d -p 80:80 -p 443:443 --env INDEX="OFF" --name=*nomconteneur* *nomimage*

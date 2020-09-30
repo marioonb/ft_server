@@ -1,6 +1,6 @@
-#installation pile LEMP  (linux, nginx,  maria db, php)
 FROM debian:buster
 
+# Installation pile LEMP  (linux, nginx,  maria db, php)
 RUN apt-get update \
 	&& apt-get -y install nginx \
 	wget \
@@ -8,17 +8,18 @@ RUN apt-get update \
 	php-fpm php-mysql \
 	vim
 
-# installation de php my admin
+# Installation de phpmyadmin
 RUN wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz \
 	&& tar -zxf phpMyAdmin-4.9.0.1-all-languages.tar.gz
 
-# installation de wordpress
+# Installation de wordpress
 RUN wget https://fr.wordpress.org/latest-fr_FR.tar.gz \
 	&& tar -xzf latest-fr_FR.tar.gz
 
-COPY srcs/essai.sh ./
+COPY srcs/run.sh ./
 COPY srcs/wp-config.php ./
 COPY srcs/default ./
 
+ENV INDEX ON
 
-CMD bash /essai.sh
+CMD bash /run.sh

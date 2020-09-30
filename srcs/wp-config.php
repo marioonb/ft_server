@@ -18,7 +18,7 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
+// ** MySQL settings - You can get this info from your web host ** //cd
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'BDD_Marion' );
 

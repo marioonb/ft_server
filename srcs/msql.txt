@@ -1,4 +1,0 @@
-CREATE USER 'marion'@'localhost';
-CREATE DATABASE dbm;
-GRANT ALL PRIVILEGES ON bbm.* TO 'marion'@'localhost' identified by 'marion';
-FLUSH PRIVILEGES;
