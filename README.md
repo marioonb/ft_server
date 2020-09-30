@@ -29,3 +29,6 @@ Entrer dans le conteneur :
 
 lancer un conteneur en desactivant l'index :
 > docker run -d -p 80:80 -p 443:443 --env INDEX="OFF" --name=*nomconteneur* *nomimage*
+
+lancer le conteneur sous linux (appler localhost:9090 et retaper localhost au lieu de ft_Server en https)
+> > docker run -d -p 9090:80 -p 443:443 --name=*nomconteneur* *nomimage*
